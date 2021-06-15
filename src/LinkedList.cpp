@@ -102,11 +102,18 @@ int LinkedList::removeFromTail()
 }
 void LinkedList::addToTail(int data)
 {
-    Node *temp = new Node();
-    temp->info = data;
-    temp->next = nullptr;
-    TAIL->next = temp;
-    TAIL = TAIL->next;
+    if (HEAD == nullptr && TAIL == nullptr)
+    {
+        addToHead(data);
+    }
+    else
+    {
+        Node *temp = new Node();
+        temp->info = data;
+        temp->next = nullptr;
+        TAIL->next = temp;
+        TAIL = TAIL->next;
+    }
 }
 
 void LinkedList::add(int data, Node *predecessor)
@@ -165,7 +172,7 @@ void LinkedList::remove(int data)
     }
 }
 
-bool LinkedList::retrieve(int data, Node*& dataOutPtr)
+bool LinkedList::retrieve(int data, Node *&dataOutPtr)
 {
     Node *p = new Node();
     p = HEAD;
@@ -181,5 +188,48 @@ bool LinkedList::retrieve(int data, Node*& dataOutPtr)
     {
         dataOutPtr = p;
         return true;
+    }
+}
+
+bool LinkedList::search(int data)
+{
+    Node *p = new Node();
+    p = HEAD;
+    while (p != nullptr && p->info != data)
+    {
+        p = p->next;
+    }
+    if (p == nullptr)
+    {
+        return false;
+    }
+    else
+    {
+        return true;
+    }
+}
+
+int LinkedList::getHead()
+{
+    if (HEAD != nullptr)
+    {
+        return HEAD->info;
+    }
+    else
+    {
+        std::cout << "Empty" << std::endl;
+        return 0;
+    }
+}
+int LinkedList::getTail()
+{
+    if (TAIL != nullptr)
+    {
+        return TAIL->info;
+    }
+    else
+    {
+        std::cout << "Empty" << std::endl;
+        return 0;
     }
 }

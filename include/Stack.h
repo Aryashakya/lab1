@@ -12,15 +12,11 @@ public:
 class LinkedListStack : public Stack
 {
 public:
-    void push(int data)
-    {
-        list.addToHead(data);
-    };
-
-    int pop()
-    {
-        return list.removeFromHead();
-    };
+    void push(int data);
+    int pop();
+    int top();
+    void traverse();
+    
 private:
     LinkedList list;
 };

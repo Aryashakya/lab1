@@ -15,7 +15,7 @@ class LinkedList
 public:
     LinkedList();
     ~LinkedList();
-    bool isEmpty(); 
+    bool isEmpty();
     void addToHead(int data);
     void addToTail(int data);
     void add(int data, Node *predecessor);
@@ -23,8 +23,10 @@ public:
     int removeFromTail();
     void remove(int data);
     bool search(int data);
-    bool retrieve(int data,Node*& dataOutPtr);
+    bool retrieve(int data, Node *&dataOutPtr);
     void traverse(char separator = ' ');
+    int getHead();
+    int getTail();
 
 private:
     Node *HEAD;
