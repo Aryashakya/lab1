@@ -1,11 +1,6 @@
 #include <iostream>
 #include "LinkedList.h"
 
-bool LinkedList::isEmpty()
-{
-    return HEAD == nullptr && TAIL == nullptr;
-}
-
 LinkedList::LinkedList()
 {
     HEAD = nullptr;
@@ -16,6 +11,12 @@ LinkedList::~LinkedList()
 {
     delete this;
 }
+
+bool LinkedList::isEmpty()
+{
+    return HEAD == nullptr && TAIL == nullptr;
+}
+
 void LinkedList::addToHead(int data)
 {
     Node *newNode = new Node();
@@ -48,7 +49,6 @@ void LinkedList::traverse(char separator)
 
 int LinkedList::removeFromHead()
 {
-
     if (!this->isEmpty())
     {
         Node *temp = HEAD;
@@ -100,6 +100,7 @@ int LinkedList::removeFromTail()
         return 0;
     }
 }
+
 void LinkedList::addToTail(int data)
 {
     if (HEAD == nullptr && TAIL == nullptr)
@@ -118,6 +119,12 @@ void LinkedList::addToTail(int data)
 
 void LinkedList::add(int data, Node *predecessor)
 {
+    if (predecessor == nullptr)
+    {
+        std::cout << "Cannot add here" << std::endl;
+        return;
+    }
+
     Node *newNode = new Node();
     newNode->info = data;
     newNode->next = predecessor->next;
@@ -182,6 +189,7 @@ bool LinkedList::retrieve(int data, Node *&dataOutPtr)
     }
     if (p == nullptr)
     {
+        dataOutPtr = nullptr;
         return false;
     }
     else
@@ -210,6 +218,7 @@ bool LinkedList::search(int data)
 }
 
 int LinkedList::getHead()
+
 {
     if (HEAD != nullptr)
     {
@@ -221,6 +230,7 @@ int LinkedList::getHead()
         return 0;
     }
 }
+
 int LinkedList::getTail()
 {
     if (TAIL != nullptr)

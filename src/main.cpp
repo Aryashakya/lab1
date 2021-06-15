@@ -16,6 +16,14 @@ int main()
     l.addToTail(411);
     l.addToTail(432);
     l.traverse();
+    l.removeFromHead();
+    l.traverse();
+    l.removeFromHead();
+    l.traverse();
+    l.removeFromTail();
+    l.traverse();
+    l.removeFromTail();
+    l.traverse();
     l.retrieve(2, a) ? std::cout << "Yes" << std::endl : std::cout << "No" << std::endl;
     l.add(8, a);
     l.traverse();
@@ -25,6 +33,6 @@ int main()
     l.search(10) ? std::cout << "Yes" << std::endl : std::cout << "No" << std::endl;
     l.search(0) ? std::cout << "Yes" << std::endl : std::cout << "No" << std::endl;
     l.search(2) ? std::cout << "Yes" << std::endl : std::cout << "No" << std::endl;
-    l.search(4) ? std::cout << "Yes" << std::endl : std::cout << "No" << std::endl; 
-    l.search(432) ? std::cout << "Yes" << std::endl : std::cout << "No" << std::endl; 
+    l.search(4) ? std::cout << "Yes" << std::endl : std::cout << "No" << std::endl;
+    l.search(432) ? std::cout << "Yes" << std::endl : std::cout << "No" << std::endl;
 }
