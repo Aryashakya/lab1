@@ -19,14 +19,6 @@ int main()
         std::cout << l.removeFromHead() << std::endl;
         std::cout << l.removeFromHead() << std::endl;
         std::cout << l.removeFromTail() << std::endl;
-        std::cout << l.removeFromHead() << std::endl;
-        std::cout << l.removeFromTail() << std::endl;
-        std::cout << l.removeFromTail() << std::endl;
-        std::cout << l.removeFromHead() << std::endl;
-        std::cout << l.removeFromHead() << std::endl;
-        std::cout << l.removeFromTail() << std::endl;
-        l.traverse();
-        l.traverse();
         l.traverse();
         l.retrieve(2, a) ? std::cout << "Yes" << std::endl : std::cout << "No" << std::endl;
         l.add(8, a);
