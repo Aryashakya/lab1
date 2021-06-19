@@ -16,7 +16,7 @@ public:
     int pop();
     int top();
     void traverse();
-    
+
 private:
     LinkedList list;
 };

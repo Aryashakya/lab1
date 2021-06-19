@@ -2,8 +2,6 @@
 #include "LinkedList.h"
 #include "Stack.h"
 
-bool sum(int data, int *dataOut);
-
 int main()
 {
     Node *a = new Node();
