@@ -63,8 +63,7 @@ int LinkedList::removeFromHead()
     }
     else
     {
-        std::cout << "List is empty" << std::endl;
-        return 0;
+        throw "List is empty";
     }
 }
 
@@ -96,8 +95,7 @@ int LinkedList::removeFromTail()
 
     else
     {
-        std::cout << "List is empty" << std::endl;
-        return 0;
+        throw "List is empty";
     }
 }
 
@@ -226,8 +224,7 @@ int LinkedList::getHead()
     }
     else
     {
-        std::cout << "Empty" << std::endl;
-        return 0;
+        throw "Empty";
     }
 }
 
@@ -239,7 +236,6 @@ int LinkedList::getTail()
     }
     else
     {
-        std::cout << "Empty" << std::endl;
-        return 0;
+        throw "Empty";
     }
 }
