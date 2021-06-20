@@ -25,8 +25,12 @@ int main()
         l.retrieve(3, a) ? std::cout << "Yes" << std::endl : std::cout << "No" << std::endl;
         l.add(7, a);
         l.traverse();
+        l.remove(1);
+        l.remove(2);
+        l.traverse();
+        l.remove(3);
         l.search(10) ? std::cout << "Yes" << std::endl : std::cout << "No" << std::endl;
-        l.search(0) ? std::cout << "Yes" << std::endl : std::cout << "No" << std::endl;
+        l.search(8) ? std::cout << "Yes" << std::endl : std::cout << "No" << std::endl;
         l.search(2) ? std::cout << "Yes" << std::endl : std::cout << "No" << std::endl;
         l.search(4) ? std::cout << "Yes" << std::endl : std::cout << "No" << std::endl;
         l.search(432) ? std::cout << "Yes" << std::endl : std::cout << "No" << std::endl;

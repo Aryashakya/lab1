@@ -8,6 +8,8 @@ int main()
     LinkedListStack s;
     try
     {
+        std::cout << "Stack Implementation:\n"
+                  << std::endl;
         s.push(1);
         s.push(2);
         s.push(3);
@@ -27,6 +29,8 @@ int main()
     LinkedListQueue q;
     try
     {
+        std::cout << "\nQueue Implementation:\n"
+                  << std::endl;
         q.enqueue(1);
         q.enqueue(2);
         q.traverse();
